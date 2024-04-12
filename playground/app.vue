@@ -11,6 +11,8 @@ await $pets('/pet/{petId}', {
   },
 })
 
+await $pets('/store/order', { body: { petId: petId.value }})
+
 const { data, execute } = await usePets('/pet/{petId}', {
   immediate: false,
   path: {
